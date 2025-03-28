@@ -19,6 +19,7 @@ MPI ve OpenMP Kodları: Veri işleme için paralel hesaplama kodları içerir.
 Docker Compose ile konteynerlerinizi başlatın:
 
 docker build -t benim-sistemim .
+
 docker run benim-sistemim
 
 # Performans Karşılaştırması:
