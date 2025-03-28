@@ -25,5 +25,5 @@ docker run benim-sistemim
 Sonuçları karşılaştırdığımızda, MPI ve OpenMP'nin birlikte kullanımının önemli bir performans artışı sağladığını görebiliyoruz. MPI, birden fazla düğüm arasında veri paylaşımını gerçekleştirirken, OpenMP her düğümde çok çekirdekli paralel işlem yaparak işlem süresini büyük ölçüde azaltıyor. Bu sayede, toplam süre 0.165446 saniyeye kadar düşmüş. OpenMP'nin 16 thread ile paralel işlemesi, her bir düğümdeki işlem gücünü verimli şekilde kullanarak işleme süresini hızlandırıyor. Ancak, MPI'nin düğümler arası veri iletimi sırasında yaşanan bazı iletişim gecikmeleri, çok büyük veri kümelerinde performansı sınırlayabilir. Yine de, her iki teknolojinin birlikte kullanılması, tek başına kullanılan herhangi bir yönteme göre belirgin bir hız artışı sağlıyor ve toplam işlem süresi çok daha kısa hale geliyor. Toplam değer 698778900 ve maksimum değer 999 olarak belirtilmiş, bu da veri işleme işleminin verimli şekilde tamamlandığını gösteriyor. Bu paralel işlem yaklaşımı, büyük veri kümeleriyle yapılan işlemlerde önemli avantajlar sunmaktadır.
 
 # Video link:
-
+https://youtu.be/sAALCaKNVsY
 
