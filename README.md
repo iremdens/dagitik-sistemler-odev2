@@ -21,8 +21,18 @@ docker build -t benim-sistemim .
 docker run benim-sistemim
 
 # Performans Karşılaştırması:
+Sonuçları karşılaştırdığımızda, MPI ve OpenMP'nin birlikte kullanımının önemli bir performans artışı sağladığını görebiliyoruz. MPI, birden fazla düğüm arasında veri paylaşımını gerçekleştirirken, OpenMP her düğümde çok çekirdekli paralel işlem yaparak işlem süresini büyük ölçüde azaltmıştır. Bu sayede toplam işlem süresi 0.150402 saniye'ye kadar düşmüştür.
 
-Sonuçları karşılaştırdığımızda, MPI ve OpenMP'nin birlikte kullanımının önemli bir performans artışı sağladığını görebiliyoruz. MPI, birden fazla düğüm arasında veri paylaşımını gerçekleştirirken, OpenMP her düğümde çok çekirdekli paralel işlem yaparak işlem süresini büyük ölçüde azaltıyor. Bu sayede, toplam süre 0.165446 saniyeye kadar düşmüş. OpenMP'nin 16 thread ile paralel işlemesi, her bir düğümdeki işlem gücünü verimli şekilde kullanarak işleme süresini hızlandırıyor. Ancak, MPI'nin düğümler arası veri iletimi sırasında yaşanan bazı iletişim gecikmeleri, çok büyük veri kümelerinde performansı sınırlayabilir. Yine de, her iki teknolojinin birlikte kullanılması, tek başına kullanılan herhangi bir yönteme göre belirgin bir hız artışı sağlıyor ve toplam işlem süresi çok daha kısa hale geliyor. Toplam değer 698778900 ve maksimum değer 999 olarak belirtilmiş, bu da veri işleme işleminin verimli şekilde tamamlandığını gösteriyor. Bu paralel işlem yaklaşımı, büyük veri kümeleriyle yapılan işlemlerde önemli avantajlar sunmaktadır.
+Paralel işlem sırasında elde edilen detaylar şu şekildedir:
+
+MPI Sürümü 1, 2, ve 3 her biri farklı düğümlerde çalışırken, her biri 16 thread'lik OpenMP paralel işleme gücüyle işlem yapmıştır.
+
+Toplam Değer: 700860777
+
+Maksimum Değer: 999
+
+OpenMP'nin 16 thread ile paralel işlemesi, her bir düğümdeki işlem gücünü verimli şekilde kullanarak işleme süresini hızlandırmıştır. Ancak, MPI'nin düğümler arası veri iletimi sırasında yaşanan bazı iletişim gecikmeleri, çok büyük veri kümelerinde performansı sınırlayabilir. Yine de, her iki teknolojinin birlikte kullanılması, tek başına kullanılan herhangi bir yönteme göre belirgin bir hız artışı sağlamıştır ve toplam işlem süresi çok daha kısa hale gelmiştir.
+
 
 # Video link:
 https://youtu.be/sAALCaKNVsY
